@@ -214,4 +214,10 @@ public class FirebasePluginMessagingService extends FirebaseMessagingService {
             FirebasePlugin.sendNotification(bundle, this.getApplicationContext());
         }
     }
+
+    @Override
+    public void onNewToken(String s) {
+        super.onNewToken(s);
+        Log.d(TAG, "NEW_TOKEN:" + s);
+    }
 }
